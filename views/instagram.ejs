@@ -1,0 +1,28 @@
+<%- include("includes/header.ejs"); %>
+<body>
+    <h2>This page belongs to @<%= user.name %></h2>
+    <div class="avatar"> <img src="<%= user.avatar %>"  alt=" avatar"></div>
+    <button>Follow</button>
+    <button>Message</button>
+
+    <p>Following:<%=user.following  %> &nbsp;&nbsp;&nbsp;&nbsp;Followers:<%= user.followers %></p>
+    <hr>
+
+    <%for(let post of user.posts){ %>
+        <div class="post">
+            <img src="<%= post.image %>" alt="post image">
+            <p><%= post.caption %></p>
+            <p>Likes: <%= post.likes %></p>
+            <p>Comments: <%= post.comments %></p>
+        </div>
+   <% }%>
+
+  
+  
+   <%- include("includes/footer.ejs"); %>
+
+
+   <script src="/app.js""></script>
+</body>
+
+</html>

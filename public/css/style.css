@@ -1,0 +1,11 @@
+img{
+    width: 100px;
+    height: 100px;
+}
+.avatar{
+    display: flex;
+    justify-content: center;
+} 
+body{
+    background-color: rgba(240, 170, 39, 0.667);
+}
